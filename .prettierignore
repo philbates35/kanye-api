@@ -1,0 +1,10 @@
+# Ignore everything...
+/*
+
+# Except...:
+!resources/
+!.eslintrc.cjs
+!package.json
+!tsconfig.json
+!tsconfig.*.json
+!vite.config.ts

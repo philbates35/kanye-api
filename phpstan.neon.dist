@@ -1,0 +1,23 @@
+includes:
+    - phar://vendor/phpstan/phpstan/phpstan.phar/conf/bleedingEdge.neon
+    - vendor/larastan/larastan/extension.neon
+    - vendor/phpstan/phpstan-mockery/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+    paths:
+        - app
+        - bootstrap
+        - config
+        - database
+        - routes
+        - tests
+    level: 9
+    excludePaths:
+        - bootstrap/cache/
+    strictRules:
+        # TODO remove when https://github.com/phpstan/phpstan-strict-rules/issues/140 is resolved
+        # See also: https://github.com/larastan/larastan/issues/1272
+        strictCalls: false
